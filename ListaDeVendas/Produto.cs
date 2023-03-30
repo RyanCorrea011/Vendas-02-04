@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,11 +11,14 @@ namespace ListaDeVendas
     {
         public decimal Valor { get; set; }
         public string Nome { get; set; }
+        public int IdP { get; set; }
+        
 
-        public Produto(decimal valor, string nome)
+        public Produto(decimal valor, string nome , int idP)
         {
             Valor = valor;
             Nome = nome;
+            IdP = idP;
         }
 
         public decimal GetValor()
@@ -36,6 +39,14 @@ namespace ListaDeVendas
         public void SetNome(string nome)
         {
             Nome = nome;
+        }
+
+        public int GetIdP() {
+            return IdP;
+        }
+        public void setIdP(int idP)
+        {
+            IdP = idP;
         }
     }
 }
